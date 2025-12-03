@@ -1,0 +1,51 @@
+<div 
+    id="leave-chat-modal"
+    class="fixed inset-0 bg-black/40 flex items-center justify-center px-4 z-50"
+>
+
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-xl max-w-sm w-full animate-fadeIn">
+        
+        <h2 class="text-lg font-semibold mb-3 text-gray-800 dark:text-gray-100">
+            Leave Chat?
+        </h2>
+
+        <p class="text-gray-600 dark:text-gray-300 mb-5">
+            Are you sure you want to leave this chat group? You will stop receiving new messages.
+        </p>
+
+        <div class="flex justify-end gap-3">
+            <button 
+                class="px-4 py-2 rounded-md bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-400"
+                onclick="closeLeaveModal()"
+            >
+                Cancel
+            </button>
+
+            <button 
+                class="px-4 py-2 rounded-md bg-red-600 text-white hover:bg-red-700"
+                hx-post="{% url 'leave_chat' chat_group.id %}"
+                hx-target="#chat_container"
+                hx-swap="outerHTML"
+            >
+                Leave
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<style>
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.96); }
+        to   { opacity: 1; transform: scale(1); }
+    }
+    .animate-fadeIn { animation: fadeIn 0.25s ease-out; }
+</style>
+
+<script>
+    function closeLeaveModal() {
+        const modal = document.getElementById("leave-chat-modal");
+        if (modal) modal.remove();
+    }
+</script>
+

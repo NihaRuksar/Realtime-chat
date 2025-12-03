@@ -1,0 +1,58 @@
+Folder PATH listing for volume Windows
+Volume serial number is 98FA-EFFA
+C:.
+|   .gitignore
+|   change.js
+|   config.js
+|   realtime-chat_tree.txt
+|   secret.txt
+|   
++---.dist
+|   \---.dist
++---realtime-chat
+|   |   .gitignore
+|   |   asgi.py
+|   |   chat.html
+|   |   header.html
+|   |   README.md
+|   |   requirements.txt
+|   |   
+|   +---a_rtchat
+|   |   |   admin.py
+|   |   |   consumers.py
+|   |   |   forms.py
+|   |   |   models.py
+|   |   |   routing.py
+|   |   |   settings.py
+|   |   |   urls.py
+|   |   |   views.py
+|   |   |   
+|   |   \---templates
+|   |       \---a_rtchat
+|   |           |   chat.html
+|   |           |   chatroom_delete.html
+|   |           |   chatroom_edit.html
+|   |           |   chat_message.html
+|   |           |   create_groupchat.html
+|   |           |   
+|   |           \---partials
+|   |                   chat_message_p.html
+|   |                   message_content.html
+|   |                   modal_chat_leave.html
+|   |                   online_count.html
+|   |                   online_status.html
+|   |                   
+|   +---deploy
+|   |       0007_socialapp_sites.py
+|   |       
+|   \---snippets
+|           button_chat.html
+|           chatroom_edit.html
+|           icon_edit.html
+|           if_other_user.html
+|           
+\---src
+    |   index.js
+    |   ssh.js
+    |   
+    \---.dist
